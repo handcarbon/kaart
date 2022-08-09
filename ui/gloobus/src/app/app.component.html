@@ -1,0 +1,17 @@
+<app-file-upload (uploaded)="reload()"></app-file-upload>
+<div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let t of tracks">
+      <td>{{t.name}}</td>
+      <td>
+        <button (click)="renderTrack(t.trackId)">Show</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div id="map"></div>
